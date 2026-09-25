@@ -69,7 +69,7 @@ function isRecord(value: unknown): value is Record<string, unknown> {
 }
 
 function getRequestId(body: unknown, response: Response): string | undefined {
-  const bodyRequestId = isRecord(body) && typeof body.requestId === "string" ? bodyRequestId : undefined;
+  const bodyRequestId = isRecord(body) && typeof body.requestId === "string" ? body.requestId : undefined;
   return bodyRequestId || response.headers.get("x-request-id") || undefined;
 }
 

@@ -1,6 +1,5 @@
 import type { Request, Response } from 'express';
 import rateLimit from 'express-rate-limit';
-import type { Request, Response } from 'express';
 import { sendError } from '../utils/response';
 
 function rateLimitHandler(code: string, message: string) {
